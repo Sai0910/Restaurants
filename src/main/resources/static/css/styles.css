@@ -1,0 +1,52 @@
+/* src/main/resources/static/css/styles.css */
+
+.side-menu {
+    width: 250px;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding-top: 20px;
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    padding: 15px;
+}
+
+.side-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+.side-menu ul li a:hover {
+    background-color: #575757;
+}
+
+.container-landing {
+    margin-top: 20px;
+}
+
+.input-container {
+    background-color: beige;
+    padding: 30px 50px;
+    box-shadow: 10px 10px 10px grey;
+    border-radius: 20px;
+    margin: 80px 30px;
+}
+
+.button-sign-in {
+    width: 300px;
+}
+
+.bg-login {
+    background-image: url('../images/background-login3.jpg');
+    background-repeat: no-repeat;
+}
