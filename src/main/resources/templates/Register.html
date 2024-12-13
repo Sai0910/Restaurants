@@ -13,28 +13,28 @@
         <div class="container-landing d-flex justify-content-center">
             <!-- Pills navs -->
             <div class="input-container">
-                <form th:action="@{/register}" th:object="${usersVO}" method="post">
+                <form th:action="@{/register}" th:object="${UsersEntity}" method="post">
                     <!-- Name input -->
                     <div data-mdb-input-init class="form-outline mb-4">
-                        <input type="text" id="registerName" class="form-control" />
+                        <input type="text" id="registerName" class="form-control" th:field="*{name}" />
                         <label class="form-label" for="registerName">Name</label>
                     </div>
 
                     <!-- Username input -->
                     <div data-mdb-input-init class="form-outline mb-4">
-                        <input type="text" id="registerUsername" class="form-control" />
+                        <input type="text" id="registerUsername" class="form-control" th:field="*{userName}" />
                         <label class="form-label" for="registerUsername">Username</label>
                     </div>
 
                     <!-- Email input -->
-                    <div data-mdb-input-init class="form-outline mb-4">
-                        <input type="email" id="registerEmail" class="form-control" />
+                    <!-- <div data-mdb-input-init class="form-outline mb-4">
+                        <input type="email" id="registerEmail" class="form-control" th:field="*{email}"/>
                         <label class="form-label" for="registerEmail">Email</label>
-                    </div>
+                    </div> -->
 
                     <!-- Password input -->
                     <div data-mdb-input-init class="form-outline mb-4">
-                        <input type="password" id="registerPassword" class="form-control" />
+                        <input type="password" id="registerPassword" class="form-control" th:field="*{password}" />
                         <label class="form-label" for="registerPassword">Password</label>
                     </div>
 
@@ -43,6 +43,19 @@
                         <input type="password" id="registerRepeatPassword" class="form-control" />
                         <label class="form-label" for="registerRepeatPassword">Repeat password</label>
                     </div>
+
+                    <!-- No Tel input -->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <input type="text" id="phoneNumber" class="form-control" th:field="*{noTel}" />
+                        <label class="form-label" for="phoneNumber">Phone Number</label>
+                    </div>
+
+                    <!-- No Tel input -->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <input type="text" id="icNumber" class="form-control" th:field="*{icNo}" />
+                        <label class="form-label" for="icNumber">IC Number</label>
+                    </div>
+
 
                     <!-- Checkbox -->
                     <div class="form-check d-flex justify-content-center mb-4">

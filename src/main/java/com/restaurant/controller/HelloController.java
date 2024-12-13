@@ -1,10 +1,10 @@
 package com.restaurant.controller;
 
+import com.restaurant.entity.UsersEntity;
+import com.restaurant.vo.usersVO;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-
-import com.restaurant.vo.usersVO;
 
 @Controller
 public class HelloController {
@@ -16,8 +16,8 @@ public class HelloController {
 
   @GetMapping("/")
   public String showHomePage(Model model) {
-      model.addAttribute("usersVO", new usersVO()); // Initialize the form object
-      return "Home"; // Thymeleaf template name
+    model.addAttribute("usersVO", new usersVO()); // Initialize the form object
+    return "Home"; // Thymeleaf template name
   }
 
   @GetMapping("/restaurants")
@@ -31,7 +31,8 @@ public class HelloController {
   }
 
   @GetMapping("/register")
-  public String register() {
+  public String register(Model model) {
+    model.addAttribute("UsersEntity", new UsersEntity());
     return "Register";
   }
 }
