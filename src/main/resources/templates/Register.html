@@ -13,7 +13,7 @@
         <div class="container-landing d-flex justify-content-center">
             <!-- Pills navs -->
             <div class="input-container">
-                <form>
+                <form th:action="@{/register}" th:object="${usersVO}" method="post">
                     <!-- Name input -->
                     <div data-mdb-input-init class="form-outline mb-4">
                         <input type="text" id="registerName" class="form-control" />
